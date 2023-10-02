@@ -1,0 +1,251 @@
+:root {
+    --primary: #2afd69;
+    --bg: #45d9a3;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-size: 100%;
+}
+
+body {
+    background-color: var(--bg);
+}
+
+/* navbar */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 7%;
+    /* background-color: #04b427; */
+    background-color: var(--primary);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .logo {
+    color: rgb(60, 157, 41);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.navbar .logo span {
+    color: #007BC0;
+}
+
+.navbar .navbar-nav a {
+    color: rgb(255, 255, 255);
+    font-size: 1.5rem;
+    display: inline-block;
+    margin: 1rem;
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+.navbar .navbar-nav a:hover {
+    color: chocolate;
+}
+
+/* Home */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero .content {
+    padding: 1.5rem 7%;
+    font-size: 1.5em;
+}
+
+/* About */
+.about {
+    padding: 8rem 7%;
+    background-color: aliceblue;
+}
+
+.about h2 {
+    text-align: center;
+}
+
+.about .isi {
+    display: flex;
+    padding: 2rem;
+}
+
+.about .isi img {
+    width: 25%;
+    padding: 0 1.5rem;
+}
+
+.about .isi p {
+    font-size: 100%;
+}
+
+/* Hasil Karya */
+
+.hasil-karya {
+    padding: 8rem 7%;
+}
+
+.hasil-karya h2 {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.hasil-karya .karya {
+    display: flex;
+    /* padding: 0.5rem 7%; */
+}
+
+.hasil-karya .karya .card {
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.hasil-karya .karya .card img {
+    width: 100%;
+}
+
+.hasil-karya .tombol-lainnya {
+    background-color: #21a6ee;
+    color: black;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    padding: 0.5rem 7%;
+}
+
+/* Kontak */
+
+.contact {
+    padding: 8rem 7%
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.contact .isi-kontak {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact input {
+    margin: 1rem 0;
+}
+
+.contact .tombol-kirim {
+    background-color: rgb(0, 149, 255);
+    padding: 0.5rem 7%;
+    width: fit-content;
+    margin-left: 2rem;
+}
+
+/* Footer */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+    height: 3rem;
+}
+
+.footer .footer-contact {
+    padding: 0.5rem 7%;
+    text-align: center;
+}
+
+.footer h4 {
+    text-align: center;
+}
+
+/* media queries */
+@media (max-width: 1008px) {
+    html {
+        font-size: 90%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 750px) {
+    html{
+        font-size: 80%;
+    }
+    #hamburger-menu {
+        display: inline-block;
+    }
+
+    .navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 25rem;
+        height: 100vh;
+        background-color: var(--primary);
+        transition: 0.5s;
+    }
+
+    .navbar .navbar-nav.active{
+        right: 0;
+    }
+
+
+    .navbar .navbar-nav a {
+        display: block;
+        margin: 1.5rem;
+        padding: 0.7rem;
+    }
+
+    .about .isi img {
+        width: 50%;
+    }
+
+    .hasil-karya .karya {
+        display: inline;
+    }
+
+    .hasil-karya .karya .card img {
+        width: 45%;
+    }
+}
+    
+
+/* HP */
+@media (max-width: 450px) {
+    html{
+        font-size: 75%;
+    }
+
+    .about .isi {
+        flex-wrap: wrap;
+    }
+
+    .about .isi img {
+        width: 100%;
+        height: 100%;
+        padding: 1rem;
+    }
+
+    .about .isi p {
+        text-align: center;
+    }
+    .hasil-karya .karya .card img {
+        width: 70%;
+    }
+}
